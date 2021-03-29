@@ -8,21 +8,15 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		try {
+		Scanner scv = new Scanner(System.in);
 
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = scv.nextInt();
+		int sum = 0;
 
-			String str = br.readLine();
-			StringTokenizer st = new StringTokenizer(str, " ");
-			int dan = Integer.parseInt(st.nextToken());
-
-			for (int i = 1; i < 10; i++) {
-				System.out.println(dan + " * " + i + " = " + i * dan);
-			}
-
-		} catch (IOException e) {
-
+		for (int i = 1; i <= n; i++) {
+			sum += i;
 		}
 
+		System.out.println(sum);
 	}
 }
